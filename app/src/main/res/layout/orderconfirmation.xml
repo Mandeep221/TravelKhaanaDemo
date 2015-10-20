@@ -1,0 +1,148 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="8">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        card_view:cardBackgroundColor="#FFFFFF"
+        card_view:cardCornerRadius="1dp"
+        card_view:cardElevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary">
+
+            <com.msarangal.travelkhaanademo.RoundedImage
+                android:id="@+id/profPic"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                android:src="@drawable/default_pic" />
+
+            <com.msarangal.travelkhaanademo.MyTextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/profPic"
+                android:text="Mandeep Sarangal"
+                android:textColor="@color/colorText" />
+
+            <ImageView
+                android:id="@+id/imgLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/logout" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:background="#CCCCCC">
+
+
+        <com.msarangal.travelkhaanademo.MyTextView
+            android:id="@+id/orderBooked"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/eTitle"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Order Booked!"
+            android:textColor="#666666"
+            android:textSize="20sp"
+            app:fontName="Nunito-Regular.ttf" />
+
+
+        <com.msarangal.travelkhaanademo.MyTextView
+            android:id="@+id/eTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/email"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="A confirmation mail has been sent to : "
+            android:textColor="#666666"
+            android:textSize="17sp" />
+
+        <com.msarangal.travelkhaanademo.MyTextView
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/orderSummery"
+            android:gravity="center"
+            android:text="manusarangal@gmail.com"
+            android:textColor="#666666"
+            android:textSize="18sp"
+            app:fontName="Nunito-Regular.ttf" />
+
+        <com.msarangal.travelkhaanademo.MyTextView
+            android:id="@+id/orderSummery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="Order Details: "
+            android:textColor="#666666"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.msarangal.travelkhaanademo.MyTextView
+            android:id="@+id/StationName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orderSummery"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="station name"
+            android:textColor="#666666" />
+
+        <com.msarangal.travelkhaanademo.MyTextView
+            android:id="@+id/arrivalTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/StationName"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Arrival time:"
+            android:textColor="#666666" />
+
+        <Button
+            android:id="@+id/place_order"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/arrivalTime"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="#666666"
+            android:text="place another order"
+            android:textColor="#FFFFFF">
+
+        </Button>
+
+    </RelativeLayout>
+
+</LinearLayout>
+
